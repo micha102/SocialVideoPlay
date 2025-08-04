@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <application
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SocialVideoPlay"
+        android:name="com.chaquo.python.android.PyApplication">
+    <activity
+        android:name=".VideoPlayerActivity"
+        android:exported="true"
+        android:configChanges="orientation|screenSize|layoutDirection"
+        >
+
+        <intent-filter android:autoVerify="true">
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.DEFAULT" />
+            <category android:name="android.intent.category.BROWSABLE" />
+            <!-- Reels -->
+            <data android:scheme="https"
+                android:host="www.facebook.com"
+                android:pathPrefix="/reel" />
+
+            <!-- Watch -->
+            <data android:scheme="https"
+                android:host="www.facebook.com"
+                android:pathPrefix="/watch" />
+            <!-- Share Redirects to Videos -->
+            <data android:scheme="https"
+                android:host="www.facebook.com"
+                android:pathPattern="/share/r/.*" />
+            <!-- Share Redirects to Videos -->
+            <data android:scheme="https"
+                android:host="www.facebook.com"
+                android:pathPattern="/share/v/.*" />
+        </intent-filter>
+
+        <intent-filter android:autoVerify="true">
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.DEFAULT" />
+            <category android:name="android.intent.category.BROWSABLE" />
+            <!-- Tiktok Videos -->
+            <data android:scheme="https"
+                android:host="www.tiktok.com"
+                android:pathPrefix="/@"
+                />
+            <data android:scheme="https"
+                android:host="tiktok.com"
+                android:pathPrefix="/@"
+                />
+        </intent-filter>
+
+        <intent-filter android:autoVerify="true">
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.DEFAULT" />
+            <category android:name="android.intent.category.BROWSABLE" />
+            <!-- Tiktok Videos -->
+            <data android:scheme="https"
+                android:host="vm.tiktok.com"
+                android:pathPrefix="/"/>
+        </intent-filter>
+
+        <intent-filter android:autoVerify="true">
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.DEFAULT" />
+            <category android:name="android.intent.category.BROWSABLE" />
+            <!-- Instagram Reels -->
+
+            <data android:scheme="https" />
+            <data android:host="www.instagram.com" />
+            <data android:pathPattern="/reels/.*" />
+            <data android:pathPattern="/reel/.*" />
+            <data android:pathPattern="/.*/reel/.*" />
+            <data android:pathPrefix="/tv" />
+        </intent-filter>
+
+        <intent-filter android:autoVerify="true">
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.DEFAULT" />
+            <category android:name="android.intent.category.BROWSABLE" />
+            <!-- X Videos -->
+            <data android:scheme="https"
+                android:host="x.com"
+                android:pathPattern="/.*/status/.*" />
+        </intent-filter>
+    </activity>
+        <activity
+            android:name=".VideoListActivity"
+            android:exported="true"
+            android:configChanges="orientation|screenSize|layoutDirection"
+            >
+        <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
+    </application>
+</manifest>
