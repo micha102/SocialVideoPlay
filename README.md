@@ -4,15 +4,16 @@ SocialVideoPlay is an Android application that intercepts video links from popul
 
 ## Features
 
-- **Video Playback from Social Media**: Plays videos and reels directly from Facebook, Instagram, Tiktok, and X/Twitter links.
+- **Video Playback from Social Media**: Intercepts and plays video and reel links from Facebook, Instagram, Tiktok, and X/Twitter.
+- **Video Looping**: Video will loop until the end exits.
 - **yt-dlp Integration**: Utilizes `yt-dlp` (a powerful YouTube downloader and video extraction tool) wrapped with Chaquopy to handle the video extraction.
 - **ExoPlayer for Playback**: Ensures smooth video playback across platforms using ExoPlayer.
 - **No Login/Tracking**: Avoids the need to log into social media accounts, preserving your privacy and blocking annoying popups that ask for registration or login.
 - **Intercept Video Links**: The app automatically intercepts video links shared via other apps or browsers.
-- **Watch History**: Tracks the history of watched videos and allows you to manage it, including clearing history with a long press.
+- **Watch History**: Lists the history of watched videos and allows you to clear history with a long press.
 - **Customizable Link Interception**: Users can configure which links to open with the app via Android settings (Settings > Apps > SocialVideoPlay > Open by default > Add link).
 
-## Supported Platforms
+## Supported Social Medias
 
 - **Facebook**
 - **Instagram**
@@ -58,7 +59,7 @@ Once installed, the app needs to be configured to intercept video links:
 
 ## Privacy
 
-This app does **not** track your viewing history or require you to log in to any social media account. It is designed to avoid tracking while providing an uninterrupted viewing experience.
+This app doesn't track anything nor requires  to log in to any social media account. It is designed to avoid big Social Media tracking by not visiting their web pages stuffed with JS and other tracking means.
 
 ## Limitations
 
